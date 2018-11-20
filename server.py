@@ -17,8 +17,8 @@ im = persisted_img()
 
 BANK_PATH = 'static/img/bank'
 BANK_THUMB_PATH = join(BANK_PATH,'thumb')
-print 'USING BANK PATH ' + BANK_PATH
-print 'USING THUMB PATH ' + BANK_THUMB_PATH
+print('USING BANK PATH ' + BANK_PATH)
+print('USING THUMB PATH ' + BANK_THUMB_PATH)
 
 def get_images(path):
     #this isn't very robust, oh well
@@ -72,7 +72,7 @@ def similar():
 def bank():
     if request.method == 'POST':
         file = request.files['file']
-        print file
+        print(file)
         if file:
             tmpfile = join(
                 tempfile.gettempdir(),

@@ -115,9 +115,9 @@ class persisted_img(img):
                     break
                 filename = row[0]
                 des = pickle.loads(str(row[1]))
-                print 'img.__init__: loading descriptor for file %s from db' % (filename)
+                print('img.__init__: loading descriptor for file %s from db' % (filename))
                 if des == None:
-                    print 'img.__init__: error loading descriptor for %s from db' % (filename)
+                    print('img.__init__: error loading descriptor for %s from db' % (filename))
                     continue
                 self.add_image(filename, des=des)
 
@@ -132,7 +132,7 @@ class persisted_img(img):
                     ''',
                     [filename, data]
                 )
-                print 'INSERT  %s to db' % (filename)
+                print('INSERT  %s to db' % (filename))
                 conn.commit()
         img.add_image(self, filename, des=des)
 
